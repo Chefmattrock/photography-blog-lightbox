@@ -1,0 +1,51 @@
+.gallery_img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery_column {
+  flex: 0 0 48%;
+  margin-bottom: 1em;
+}
+
+
+.gallery_lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+
+.gallery_lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .gallery_column {
+    flex: 0 0 100%;
+  }
+}
